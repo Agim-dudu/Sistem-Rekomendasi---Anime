@@ -346,17 +346,6 @@ setelah dilakukan pengecekan untuk dataset `anime-dataset-2023.csv` tidak terdap
 
 dari output diatas didapati bahwa terdapat missing value pada dataset `user-details-2023.csv` pada atribut Username dengan jumlah 1 , Gender berjumlah 506907, Birthday berjumlah 563222, Location berjumlah 578485 dan pada dataset `user-score-2023.csv` missing value berjumlah 232 pada atribut username.
 
-total data setelah menghapus missig value pada kedua dataset seperti table berikut:
-
-| Nama Dataset           | Jumah Baris             | Jumlah Kolom |
-|------------------------|-------------------------|--------------|
-| user-details-2023.csv  | 731290                  | 16           |
-
-<br>
-
-| Nama Dataset           | Jumah Baris             | Jumlah Kolom |
-|------------------------|-------------------------|--------------|
-| user-score-2023.csv    | 24325191                | 5            |
 
 ### Exploratory Data Analysis - Univariate Analysis
 
@@ -404,9 +393,26 @@ Teknik Data preparation yang dilakukan terdiri dari:
 
 sebelumnya kita memiliki 3 file csv dan setelah di cek untuk melakukan Content Based Filtering kita cukup menggunakan dataset `anime-dataset-2023` dan untuk Collaborative Filtering kita cukup menggunakan `users-score-2023` yang kemudian akan disimpan kedalam 2 data frame Anime dan Rating.
 
-**Hapus beberapa atribut yang tidak terlalu penting pada dataframe Anime**
+**Penanganan Missing Value**
 
-```Anime = anime_data.drop(columns=['English name', 'Other name', 'Synopsis','Episodes', 'Aired', 'Premiered', 'Status', 'Producers', 'Licensors', 'Studios', 'Source', 'Duration', 'Rating', 'Rank', 'Popularity', 'Favorites', 'Scored By', 'Members', 'Image URL', 'Score','Type'])```
+- pada tahap Exploratory Data Analysis kita mengidentifikasi terdapat terdapat missing value pada dataset `user-details-2023.csv` pada atribut Username dengan jumlah 1 , Gender berjumlah 506907, Birthday berjumlah 563222, Location berjumlah 578485 dan pada dataset `user-score-2023.csv` missing value berjumlah 232 pada atribut username yang harus dihapus.
+
+  ```user_detail.dropna()```
+  
+  ```user_rating.dropna()```
+
+  total data setelah menghapus missig value pada kedua dataset seperti table berikut:
+
+  | Nama Dataset           | Jumah Baris             | Jumlah Kolom |
+  |------------------------|-------------------------|--------------|
+  | user-details-2023.csv  | 731290                  | 16           |
+
+  <br>
+
+  | Nama Dataset           | Jumah Baris             | Jumlah Kolom |
+  |------------------------|-------------------------|--------------|
+  | user-score-2023.csv    | 24325191                | 5            |
+
 
 **Hapus beberapa atribut yang tidak terlalu penting pada dataframe Rating**
 

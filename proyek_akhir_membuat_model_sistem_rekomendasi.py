@@ -277,6 +277,15 @@ plt.show()
 
 """Nilai korelasi 0.773 menunjukkan adanya hubungan positif yang kuat antara jumlah Favorites dan Members. Ini berarti bahwa anime dengan jumlah Members yang tinggi cenderung juga memiliki jumlah Favorites yang tinggi.
 
+## Data Preparation
+
+Teknik Data preparation yang dilakukan terdiri dari:
+
+- Data Preprocessing
+- TF-IDF Vectorizer Data Anime
+- Encoding Data User Rating
+- Train-test-split User Rating
+
 ### Data Preprocessing
 
 sebelumnya kita memiliki 3 file csv dan setelah di cek untuk melakukan Content Based Filtering kita cukup menggunakan dataset anime-dataset-2023 dan untuk Collaborative Filtering kita cukup menggunakan users-score-2023 yang kemudian akan kita simpan kedalam 2 data frame Anime dan Rating.
@@ -327,14 +336,6 @@ example_rating = fix_rating.copy()
 print(example_rating.head())
 
 """karena dataset Rating sangat banyak dan tidak sepadan dengan sumber daya yang saya miliki oleh karena itu kita akan mengambil beberap puluh ribu saja untuk dijadikan sample.
-
-## Data Preparation
-
-Teknik Data preparation yang dilakukan terdiri dari:
-
-- TF-IDF Vectorizer Data Anime
-- Encoding Data User Rating
-- Train-test-split User Rating
 
 ### TF-IDF Vectorizer Data Anime
 
