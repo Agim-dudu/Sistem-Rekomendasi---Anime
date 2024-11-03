@@ -45,7 +45,7 @@ Untuk mencapai goals di atas, berikut adalah pendekatan algoritma yang akan digu
 
 ## Data Understanding
 
-Pada project yg dibuat ini dataset diambil dari situs repository terbuka kaggle dengan keterangan seperti table di bawah ini.
+Pada project yg dibuat ini dataset diambil dari situs repository terbuka kaggle [Tautan](https://www.kaggle.com/datasets/dbdmobile/myanimelist-dataset/data?select=anime-filtered.csv) dengan keterangan seperti table di bawah ini.
 
 | Jenis    | Keterangan                                                |
 |----------|-----------------------------------------------------------|
