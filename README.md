@@ -390,6 +390,16 @@ Pada visualisasi di atas didapati nilai korelasi negatif -0.19 ini menunjukkan *
 
 Pada visualisasi di atas didapati nilai korelasi 0.773 menunjukkan adanya hubungan positif yang kuat antara jumlah Favorites dan Members. Ini berarti bahwa anime dengan jumlah Members yang tinggi cenderung juga memiliki jumlah Favorites yang tinggi.
 
+
+## Data Preparation
+
+Teknik Data preparation yang dilakukan terdiri dari:
+
+- Data Preprocessing
+- TF-IDF Vectorizer Data Anime
+- Encoding Data User Rating
+- Train-test-split Data User Rating
+
 ### Data Preprocessing
 
 sebelumnya kita memiliki 3 file csv dan setelah di cek untuk melakukan Content Based Filtering kita cukup menggunakan dataset `anime-dataset-2023` dan untuk Collaborative Filtering kita cukup menggunakan `users-score-2023` yang kemudian akan disimpan kedalam 2 data frame Anime dan Rating.
@@ -422,13 +432,9 @@ Karena setelah dicek terdapat value `UNKNOWN` pada atribut Genre maka akan kita 
 
 Karena dataframe Rating sangat banyak dan tidak sepadan dengan sumber daya yang saya miliki oleh karena itu kita akan mengambil beberap puluh ribu saja untuk dijadikan sample.
 
-## Data Preparation
+**Mengapa diperlukan tahapan Data Preprocessing?**
 
-Teknik Data preparation yang dilakukan terdiri dari:
-
-- TF-IDF Vectorizer Data Anime
-- Encoding Data User Rating
-- Train-test-split Data User Rating
+- Data preprocessing adalah tahap penting dalam analisis data dan pengembangan model machine learning, yang bertujuan untuk mempersiapkan data agar lebih bersih, relevan, dan siap digunakan. Tahapan ini diperlukan untuk mengurangi kebisingan (noise) dengan menghapus atribut yang tidak penting, seperti yang dilakukan pada dataframe Anime dan Rating, serta meningkatkan kualitas data dengan menghapus nilai yang tidak valid atau 'UNKNOWN' dalam atribut Genre. Selain itu, preprocessing mempercepat proses analisis dengan mengurangi jumlah data dan atribut yang tidak perlu, serta memudahkan pemrosesan data yang lebih terstruktur. Hal ini juga berkontribusi pada peningkatan kinerja model, karena model membutuhkan data yang bersih dan relevan untuk menghasilkan prediksi yang akurat. Dengan demikian, data preprocessing menyediakan basis yang solid untuk analisis lebih lanjut, memastikan bahwa data yang digunakan berkualitas tinggi dan mudah diolah.
 
 ### TF-IDF Vectorizer Data Anime
 
