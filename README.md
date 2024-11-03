@@ -47,6 +47,8 @@ Untuk mencapai goals di atas, berikut adalah pendekatan algoritma yang akan digu
 
 Pada project yg dibuat ini dataset diambil dari situs repository terbuka kaggle [Tautan](https://www.kaggle.com/datasets/dbdmobile/myanimelist-dataset/data?select=anime-filtered.csv) dengan keterangan seperti table di bawah ini.
 
+**Informasi Dataset**
+
 | Jenis    | Keterangan                                                |
 |----------|-----------------------------------------------------------|
 | Title    | Anime Dataset 2023                                        |
@@ -57,7 +59,7 @@ Pada project yg dibuat ini dataset diambil dari situs repository terbuka kaggle 
 | Tags     | Arts and Entertainment, Movies and TV Shows, Anime and Manga, Popular Culture, Japan |
 | Usability | 10.00                                                     |
 
-### Exploratory Data Analysis - Deskripsi Variabel
+### Variabel-variabel dataset adalah sebagai berikut:
 
 **anime-dataset-2023.csv**
 
@@ -119,6 +121,243 @@ Dataset Detail Pengguna ini menyediakan informasi berharga untuk menganalisis pe
 
 Dataset Skor Pengguna memungkinkan berbagai analisis dan wawasan tentang interaksi pengguna dengan anime. Dengan memeriksa penilaian pengguna untuk berbagai judul anime, Anda dapat mengidentifikasi anime yang memiliki rating tinggi dan populer di kalangan pengguna. Selain itu, Anda dapat mengeksplorasi preferensi pengguna dan pola menonton untuk judul anime tertentu. Dataset ini juga menjadi dasar untuk membangun sistem rekomendasi berdasarkan penilaian pengguna, membantu menyarankan anime yang sesuai dengan selera individu. Selanjutnya, Anda dapat melakukan pemfilteran kolaboratif dan analisis kesamaan untuk menemukan pola minat pengguna yang serupa. Secara keseluruhan, dataset ini menawarkan informasi berharga untuk memahami keterlibatan dan preferensi pengguna di platform anime.
 
+### Exploratory Data Analysis - Deskripsi Variable
+
+| No | Column       | Non-Null Count | Dtype  |
+|----|--------------|----------------|--------|
+| 1  | anime_id     | 24905 non-null | int64  |
+| 2  | Name         | 24905 non-null | object |
+| 3  | English name | 24905 non-null | object |
+| 4  | Other name   | 24905 non-null | object |
+| 5  | Score        | 24905 non-null | object |
+| 6  | Genres       | 24905 non-null | object |
+| 7  | Synopsis     | 24905 non-null | object |
+| 8  | Type         | 24905 non-null | object |
+| 9  | Episodes     | 24905 non-null | object |
+| 10 | Aired        | 24905 non-null | object |
+| 11 | Premiered    | 24905 non-null | object |
+| 12 | Status       | 24905 non-null | object |
+| 13 | Producers    | 24905 non-null | object |
+| 14 | Licensors    | 24905 non-null | object |
+| 15 | Studios      | 24905 non-null | object |
+| 16 | Source       | 24905 non-null | object |
+| 17 | Duration     | 24905 non-null | object |
+| 18 | Rating       | 24905 non-null | object |
+| 19 | Rank         | 24905 non-null | object |
+| 20 | Popularity   | 24905 non-null | int64  |
+| 21 | Favorites    | 24905 non-null | int64  |
+| 22 | Scored By    | 24905 non-null | object |
+| 23 | Members      | 24905 non-null | int64  |
+| 24 | Image URL    | 24905 non-null | object |
+
+Dari tabel di atas didapat informasi untuk dataset `anime-dataset-2023.csv` banyak fitur categorical dan numerik :
+
+   - Terdapat 20 fitur dengan tipe categorical atau object yaitu `Name, English name, Other name, Score, Genres, Synopsis, Type, Episodes, Aired, Premiered, Status, Producers, Licensors, Studios, Source, Duration, Rating, Rank, Scored By, Image URL`.
+
+   - Terdapat 4 feature dengan tipe numeric terdiri dari 4 int64 yaitu `anime_id, Popularity, Favorites, Members`.
+
+| No | Column            | Non-Null Count   | Dtype    |
+|----|-------------------|------------------|----------|
+| 0  | Mal ID            | 731290 non-null   | int64    |
+| 1  | Username          | 731289 non-null   | object   |
+| 2  | Gender            | 224383 non-null   | object   |
+| 3  | Birthday          | 168068 non-null   | object   |
+| 4  | Location          | 152805 non-null   | object   |
+| 5  | Joined            | 731290 non-null   | object   |
+| 6  | Days Watched      | 731282 non-null   | float64  |
+| 7  | Mean Score        | 731282 non-null   | float64  |
+| 8  | Watching          | 731282 non-null   | float64  |
+| 9  | Completed         | 731282 non-null   | float64  |
+| 10 | On Hold           | 731282 non-null   | float64  |
+| 11 | Dropped           | 731282 non-null   | float64  |
+| 12 | Plan to Watch     | 731282 non-null   | float64  |
+| 13 | Total Entries     | 731282 non-null   | float64  |
+| 14 | Rewatched         | 731282 non-null   | float64  |
+| 15 | Episodes Watched   | 731282 non-null   | float64  |
+
+Dari tabel di atas didapat informasi untuk dataset `users-details-2023.csv` banyak fitur categorical dan numerik :
+
+   - Terdapat 5 fitur dengan tipe categorical atau object yaitu `Username, Gender, Birthday, Location, Joined`.
+
+   - Terdapat 1 feature dengan tipe numeric terdiri dari 1 int64 dan 10 float64 yaitu `Mal ID, Days Watched, Mean Score, Watching, Completed, On Hold, Dropped, Plan to Watch, Total Entries, Rewatched, Episodes Watched`.
+
+| No | Column       | Dtype  |
+|----|--------------|--------|
+| 0  | user_id      | int64  |
+| 1  | Username     | object |
+| 2  | anime_id     | int64  |
+| 3  | Anime Title  | object |
+| 4  | rating       | int64  |
+
+Dari tabel di atas didapat informasi untuk dataset `users-score-2023.csv` banyak fitur categorical dan numerik :
+
+   - Terdapat 2 fitur dengan tipe categorical atau object yaitu `Username, Anime Title`.
+
+   - Terdapat 3 feature dengan tipe numeric terdiri dari 3 int64 yaitu `user_id, anime_id, rating`.
+
+| Statistic   | anime_id       | Popularity     | Favorites        | Members           |
+|-------------|----------------|----------------|------------------|-------------------|
+| Count       | 24905          | 24905          | 24905            | 24905             |
+| Mean        | 29776.71       | 12265.39       | 432.60           | 37104.96          |
+| Std Dev     | 17976.08       | 7187.43        | 4353.18          | 156825.18         |
+| Min         | 1              | 0              | 0                | 0                 |
+| 25%         | 10507          | 6040           | 0                | 209               |
+| 50%         | 34628          | 12265          | 1                | 1056              |
+| 75%         | 45240          | 18491          | 18               | 9326              |
+| Max         | 55735          | 24723          | 217606           | 3744541           |
+
+<br>
+
+| No | Column             | Count      | Mean       | Std Dev     | Min  | 25%       | 50%       | 75%       | Max        |
+|----|--------------------|------------|------------|-------------|------|-----------|-----------|-----------|------------|
+| 1  | Mal ID             | 731290     | 507020.30  | 364014.70   | 1    | 201108.50 | 425170.50 | 775340.00 | 1291097.00 |
+| 2  | Days Watched       | 731282     | 24.18      | 140.11      | 0    | 0.00      | 0.20      | 24.80     | 105338.60  |
+| 3  | Mean Score         | 731282     | 3.95       | 4.14        | 0    | 0.00      | 0.00      | 8.04      | 255.00     |
+| 4  | Watching           | 731282     | 4.77       | 20.50       | 0    | 0.00      | 0.00      | 4.00      | 4358.00    |
+| 5  | Completed          | 731282     | 65.95      | 186.63      | 0    | 0.00      | 0.00      | 48.00     | 13226.00   |
+| 6  | On Hold            | 731282     | 3.39       | 19.30       | 0    | 0.00      | 0.00      | 1.00      | 5167.00    |
+| 7  | Dropped            | 731282     | 4.57       | 34.92       | 0    | 0.00      | 0.00      | 1.00      | 14341.00   |
+| 8  | Plan to Watch      | 731282     | 17.55      | 90.29       | 0    | 0.00      | 0.00      | 5.00      | 21804.00   |
+| 9  | Total Entries      | 731282     | 96.23      | 265.46      | 0    | 0.00      | 1.00      | 74.00     | 24817.00   |
+| 10 | Rewatched          | 731282     | 4.44       | 29.69       | 0    | 0.00      | 0.00      | 0.00      | 13215.00   |
+| 11 | Episodes Watched   | 731282     | 1658.83    | 50771.68    | 0    | 0.00      | 15.00     | 1489.00   | 3376442.00 |
+
+<br>
+
+| Statistic | user_id       | anime_id      | rating       |
+|-----------|----------------|----------------|--------------|
+| count     | 24,325,190     | 24,325,190     | 24,325,190   |
+| mean      | 440,384.3      | 9,754.7        | 7.623        |
+| std       | 366,946.9      | 12,061.9       | 1.662        |
+| min       | 1              | 1              | 1            |
+| 25%       | 97,188.0       | 873.0          | 7            |
+| 50%       | 387,978.0      | 4,726.0        | 8            |
+| 75%       | 528,043.0      | 13,161.0       | 9            |
+| max       | 1,291,097.0    | 56,085.0       | 10           |
+
+3 Table diatas memberikan informasi statistik pada masing-masing kolom di 3 dataset, antara lain:
+
+- Count adalah jumlah sampel pada data.
+- Mean adalah nilai rata-rata.
+- Std adalah standar deviasi.
+- Min yaitu nilai minimum setiap kolom.
+- 25% adalah kuartil pertama. Kuartil adalah nilai yang menandai batas interval - dalam empat bagian sebaran yang sama.
+- 50% adalah kuartil kedua, atau biasa juga disebut median (nilai tengah).
+- 75% adalah kuartil ketiga.
+- Max adalah nilai maksimum.
+
+| Nama Dataset           | Jumah Baris             | Jumlah Kolom |
+|------------------------|-------------------------|--------------|
+| anime-dataset-2023.csv | 24905                   | 24           |
+
+<br>
+
+| Nama Dataset           | Jumah Baris             | Jumlah Kolom |
+|------------------------|-------------------------|--------------|
+| users-details-2023.csv | 731290                  | 16           |
+
+<br>
+
+| Nama Dataset           | Jumah Baris             | Jumlah Kolom |
+|------------------------|-------------------------|--------------|
+| users-score-2023.csv   | 24325191                | 5            |
+
+### Exploratory Data Analysis - Missing Value
+
+**Mengecek missing value, Duplikat**
+
+| Nama Dataset           | Data Duplikat           |
+|------------------------|-------------------------|
+| anime-dataset-2023.csv | 0                       | 
+
+<br>
+
+| Nama Dataset           | Data Duplikat           |
+|------------------------|-------------------------|
+| users-details-2023.csv | 0                       | 
+
+<br>
+
+| Nama Dataset           | Data Duplikat           |
+|------------------------|-------------------------|
+| users-score-2023.csv | 0                         | 
+
+tidak terdapat data duplikat pada ke-3 dataset.
+
+<br>
+
+| Field            | Count |
+|------------------|-------|
+| anime_id         | 0     |
+| Name             | 0     |
+| English name     | 0     |
+| Other name       | 0     |
+| Score            | 0     |
+| Genres           | 0     |
+| Synopsis         | 0     |
+| Type             | 0     |
+| Episodes         | 0     |
+| Aired            | 0     |
+| Premiered        | 0     |
+| Status           | 0     |
+| Producers        | 0     |
+| Licensors        | 0     |
+| Studios          | 0     |
+| Source           | 0     |
+| Duration         | 0     |
+| Rating           | 0     |
+| Rank             | 0     |
+| Popularity       | 0     |
+| Favorites        | 0     |
+| Scored By        | 0     |
+| Members          | 0     |
+| Image URL        | 0     |
+
+setelah dilakukan pengecekan untuk dataset `anime-dataset-2023.csv` tidak terdapat missing value.
+
+| Field               | Count   |
+|---------------------|---------|
+| Mal ID              | 0       |
+| Username            | 1       |
+| Gender              | 506,907 |
+| Birthday            | 563,222 |
+| Location            | 578,485 |
+| Joined              | 0       |
+| Days Watched        | 8       |
+| Mean Score          | 8       |
+| Watching            | 8       |
+| Completed           | 8       |
+| On Hold             | 8       |
+| Dropped             | 8       |
+| Plan to Watch       | 8       |
+| Total Entries       | 8       |
+| Rewatched           | 8       |
+| Episodes Watched    | 8       |
+
+<br>
+
+| Field          | Count |
+|----------------|-------|
+| user_id        | 0     |
+| Username       | 232   |
+| anime_id       | 0     |
+| Anime Title    | 0     |
+| rating         | 0     |
+
+dari output diatas didapati bahwa terdapat missing value pada dataset `user-details-2023.csv` pada atribut Username dengan jumlah 1 , Gender berjumlah 506907, Birthday berjumlah 563222, Location berjumlah 578485 dan pada dataset `user-score-2023.csv` missing value berjumlah 232 pada atribut username.
+
+total data setelah menghapus missig value pada kedua dataset seperti table berikut:
+
+| Nama Dataset           | Jumah Baris             | Jumlah Kolom |
+|------------------------|-------------------------|--------------|
+| user-details-2023.csv  | 731290                  | 16           |
+
+<br>
+
+| Nama Dataset           | Jumah Baris             | Jumlah Kolom |
+|------------------------|-------------------------|--------------|
+| user-score-2023.csv    | 24325191                | 5            |
+
 ### Exploratory Data Analysis - Univariate Analysis
 
 ![alt text](https://github.com/Agim-dudu/Sistem-Rekomendasi---Anime/blob/main/Resource/image-5.png?raw=true)
@@ -151,81 +390,109 @@ Pada visualisasi di atas didapati nilai korelasi negatif -0.19 ini menunjukkan *
 
 Pada visualisasi di atas didapati nilai korelasi 0.773 menunjukkan adanya hubungan positif yang kuat antara jumlah Favorites dan Members. Ini berarti bahwa anime dengan jumlah Members yang tinggi cenderung juga memiliki jumlah Favorites yang tinggi.
 
+### Data Preprocessing
+
+sebelumnya kita memiliki 3 file csv dan setelah di cek untuk melakukan Content Based Filtering kita cukup menggunakan dataset `anime-dataset-2023` dan untuk Collaborative Filtering kita cukup menggunakan `users-score-2023` yang kemudian akan disimpan kedalam 2 data frame Anime dan Rating.
+
+**Hapus beberapa atribut yang tidak terlalu penting pada dataframe Anime**
+
+```Anime = anime_data.drop(columns=['English name', 'Other name', 'Synopsis','Episodes', 'Aired', 'Premiered', 'Status', 'Producers', 'Licensors', 'Studios', 'Source', 'Duration', 'Rating', 'Rank', 'Popularity', 'Favorites', 'Scored By', 'Members', 'Image URL', 'Score','Type'])```
+
+**Hapus beberapa atribut yang tidak terlalu penting pada dataframe Rating**
+
+```Rating = user_rating.drop(columns=['Anime Title', 'Username'])```
+
+**Menyamakan Anime Genres**
+
+| anime_id | Name                                                    | Genres  |
+|----------|---------------------------------------------------------|---------|
+| 485      | Mahou no Princess Minky Momo                            | UNKNOWN |
+| 603      | Hikaru no Go: Hokuto Hai e no Michi                    | UNKNOWN |
+| 894      | Shinshaku Sengoku Eiyuu Densetsu: Sanada Juu Y...     | UNKNOWN |
+| 1096     | Nitaboh                                                | UNKNOWN |
+| 1115     | Ame to Shoujo to Watashi no Tegami                     | UNKNOWN |
+| ...      | ...                                                     | ...     |
+| 24528    | Shayou (Music)                                         | UNKNOWN |
+| 24549    | Telepath                                               | UNKNOWN |
+| 24635    | Slash                                                  | UNKNOWN |
+| 24729    | The IDOLM@STER Cinderella Girls: U149 Recap            | UNKNOWN |
+| 24856    | Fins                                                   | UNKNOWN |
+
+Karena setelah dicek terdapat value `UNKNOWN` pada atribut Genre maka akan kita hapus.
+
+Karena dataframe Rating sangat banyak dan tidak sepadan dengan sumber daya yang saya miliki oleh karena itu kita akan mengambil beberap puluh ribu saja untuk dijadikan sample.
+
 ## Data Preparation
 
-Pada bagian ini ada beberapa tahap persiapan data yang dilakukan, yaitu:
+Teknik Data preparation yang dilakukan terdiri dari:
 
-- Memuat dan Memeriksa Atribut Dataset
-  - ```print(anime_data.columns.tolist())```
-  
-    Mencetak daftar atribut (kolom) dari dataset anime yang dimuat.
+- TF-IDF Vectorizer Data Anime
+- Encoding Data User Rating
+- Train-test-split Data User Rating
 
-  - ```print(user_rating.columns.tolist())```
+### TF-IDF Vectorizer Data Anime
 
-    Mencetak daftar atribut dari dataframe user_rating.
+![alt text](image.png)
 
-- Menyaring Atribut yang Tidak Perlu
+ - Mengubah data kedalam representasi numerik dengan TF-IDF Vectorizer sebelum tahap Modeling **Cosine Similiarity**
 
-  - ```Anime = anime_data.drop(columns=['English name', 'Other name', 'Synopsis','Episodes', 'Aired', 'Premiered','Status', 'Producers', 'Licensors', 'Studios', 'Source', 'Duration', 'Rating','Rank', 'Popularity', 'Favorites', 'Scored By', 'Members', 'Image URL', 'Score','Type'])```
-
-    Menghapus kolom yang tidak relevan atau tidak diperlukan untuk modeling.
-
-  - ```Rating = user_rating.drop(columns=['Anime Title', 'Username'])```
-
-    Menghapus kolom yang tidak diperlukan dari dataframe rating.
-
-- Mengecek Missing Values
-
-  - ```Anime.isnull().sum()```
-
-    Memeriksa jumlah missing values dalam dataframe Anime jika terdapat missing value nantinya akan dihapus.
-
-- Mengecek Duplikasi
-
-  - ```Anime.duplicated().sum()```
-
-    Memeriksa jumlah baris yang duplikat dalam dataframe Anime jika terdapat data duplikat nantinya akan dihapus.
-
-- Menghapus Data Atribut Dengan Nilai Yang Aneh
-
-  - ```fix_anime = fix_anime[fix_anime['Genres'] != 'UNKNOWN']```
-
-    Menghapus semua baris yang memiliki genre 'UNKNOWN'.
-
-- Mengubah data kedalam representasi numerik dengan TF-IDF Vectorizer sebelum tahap pemodelan **Content Based Filtering**
-
-- Encoding fitur kategori untuk sebelum tahap pemodelan **Collaborative Filtering**
-
-
-**Mengapa diperlukan tahapan data preparation tadi?**
-
-- Memeriksa atribut penting untuk memahami struktur dataset dan atribut mana yang releva/digunakan untuk tahapan modeling nantinya.
-
-- Menyaring kolom yang tidak penting membantu menyederhanakan dataset, mengurangi kompleksitas, dan mengurangi kemungkinan kebisingan dalam analisis.
-
-- Mengetahui apakah ada data yang hilang adalah penting karena missing values dapat memengaruhi hasil analisis dan model. Langkah ini membantu untuk mengambil tindakan yang diperlukan untuk menangani missing values, seperti pengisian atau penghapusan data.
-
-- Data duplikat dapat merusak analisis dan memberikan hasil yang menyesatkan. Dengan mengecek dan menghapus data duplikat, memastikan integritas dataset.
-
-- Menghapus data yang tidak valid atau tidak lengkap akan meningkatkan kualitas data yang digunakan untuk analisis. Data yang bersih dan relevan akan menghasilkan model yang lebih akurat dan dapat diandalkan.
+**Mengapa diperlukan Mengubah data kedalam representasi numerik?**
 
 - Data perlu diubah kedalam representasi numerik karena sistem rekomendasi berbasis konten membutuhkan representasi numerik dari teks atau fitur kategori agar dapat mengukur kemiripan antar-item. Misalnya, dalam rekomendasi film, kategori seperti "Action," "Drama," atau "Fantasy" diubah menjadi nilai numerik untuk dihitung kemiripannya.
 
-- Encoding fitur kategori perlu dilakukan karena pada Collaborative Filtering, model harus belajar dari pola interaksi pengguna terhadap item. Karena data seperti ID pengguna dan ID item bersifat kategori, data ini perlu diubah ke dalam bentuk numerik agar model neural network dapat memprosesnya.
+### Encoding Data User Rating
 
-Tahapan data preparation sangat penting untuk memastikan bahwa data yang digunakan untuk analisis dan pemodelan berkualitas tinggi, lengkap, dan relevan. Dengan melakukan pembersihan, penyaringan, dan pemformatan data, dapat mempersiapkan dasar yang kuat untuk langkah-langkah analisis selanjutnya, baik untuk content-based filtering maupun collaborative filtering.
+![alt text](image-1.png)
+
+- Encoding data untuk sebelum tahap pemodelan **Collaborative Filtering**
+
+**Mengapa diperlukan melakukan Encoding data?**
+
+- Encoding data perlu dilakukan karena pada Collaborative Filtering, model harus belajar dari pola interaksi pengguna terhadap item. Data perlu diubah ke dalam bentuk numerik agar model neural network dapat memprosesnya.
+
+
+### Train-test-split User Rating
+
+Selanjutnya, dilakukan train-test-split dengan pembagian data sebesar 80:20 antara data latih (train) dan data validasi.
+
+**Mengapa diperlukan melakukan Train-test-split data?**
+
+- Memisahkan data menjadi set pelatihan dan pengujian memungkinkan kita untuk mengevaluasi kinerja model pada data yang tidak pernah dilihat sebelumnya. Ini memberikan gambaran yang lebih akurat tentang seberapa baik model yg kita buat.
 
 ## Modeling
 
-pada project ini ada 2 pendekatan yang digunakan untuk Sistem Rekomendasi Anime yaitu:
+Pada tahapan model yang digunakan terdiri dari:
 
-- Sistem rekomendasi berbasis konten (content-based filtering) dengan Cosine Similiarity.
+- Cosine Similarity
+- RecomenderNet
 
-  - **Cara Kerja:** 
+### 1. Cosine Similarity
 
-    ![alt text](https://github.com/Agim-dudu/Sistem-Rekomendasi---Anime/blob/main/Resource/image-13.png?raw=true)
+- **Cara Membuat Model**:
 
-    Content-based filtering mempelajari profil minat pengguna baru berdasarkan data dari objek yang telah dinilai pengguna. Algoritma ini bekerja dengan menyarankan item serupa yang pernah disukai di masa lalu atau sedang dilihat di masa kini kepada pengguna. Semakin banyak informasi yang diberikan pengguna, semakin baik akurasi sistem rekomendasi.  
+  1.   ```from sklearn.metrics.pairwise import cosine_similarity```
+
+       - Mengimpor fungsi cosine_similarity dari modul sklearn.metrics.pairwise. Fungsi ini digunakan untuk menghitung kemiripan kosinus antar-vektor (contohnya, antar-vektor TF-IDF yang mewakili deskripsi atau genre anime).
+
+  2.   ```cosine_sim = cosine_similarity(tfidf_matrix)```
+
+       - Fungsi cosine_similarity menghitung kemiripan kosinus antara semua pasangan baris dalam matriks tfidf_matrix.  
+
+  3.   ```cosine_sim = cosine_similarity(tfidf_matrix)```
+
+       - Fungsi cosine_similarity menghitung kemiripan kosinus antara semua pasangan baris dalam matriks tfidf_matrix.
+
+        - **Penjelasan Parameter**:
+
+          - tfidf_matrix: Matriks yang berisi nilai TF-IDF untuk masing-masing anime.
+
+    ![alt text](image-2.png)
+
+    pada kode di atas, dengan menggunakan argpartition, kita mengambil sejumlah nilai k tertinggi dari similarity data (dalam kasus ini: dataframe cosine_sim_df). Kemudian, kita mengambil data dari bobot (tingkat kesamaan) tertinggi ke terendah. Data ini dimasukkan ke dalam variabel closest. Berikutnya, kita perlu menghapus nama_anime yang yang dicari agar tidak muncul dalam daftar rekomendasi. Dalam kasus ini, nanti kita akan mencari anime yang mirip dengan Tarareba, sehingga kita perlu drop nama_anime Tarareba agar tidak muncul dalam daftar rekomendasi yang diberikan nanti.
+
+- **Cara Kerja Pendekatan Content-based filtering:** 
+
+    Content-based filtering mempelajari profil minat pengguna baru berdasarkan data dari objek yang telah dinilai pengguna. Algoritma ini bekerja dengan menyarankan item serupa yang pernah disukai di masa lalu atau sedang dilihat di masa kini kepada pengguna. Semakin banyak informasi yang diberikan pengguna, semakin baik akurasi sistem rekomendasi.
 
   - **Kelebihan:**
 
@@ -237,33 +504,138 @@ pada project ini ada 2 pendekatan yang digunakan untuk Sistem Rekomendasi Anime 
 
     - Keterbatasan dalam Diversifikasi: Cenderung merekomendasikan item yang serupa dengan yang sudah disukai pengguna, yang bisa membuat rekomendasi menjadi monoton.
     - Ketergantungan pada Kualitas Fitur Konten: Jika fitur atau deskripsi konten terbatas atau kurang informatif, sistem akan sulit memberikan rekomendasi yang relevan.
-    - Tidak Memanfaatkan Informasi dari Pengguna Lain: Sistem ini tidak belajar dari interaksi atau preferensi pengguna lain, yang dapat mengurangi variasi rekomendasi.
+    - Tidak Memanfaatkan Informasi dari Pengguna Lain: Sistem ini tidak belajar dari interaksi atau preferensi pengguna lain, yang dapat mengurangi variasi rekomendasi. 
 
-    - **Cara Membuat Model:**
+- **Cara Kerja Model Cosine Similiarity:**  
+
+    Cosine similarity adalah teknik yang digunakan untuk mengukur seberapa mirip dua vektor, terlepas dari ukuran atau panjang vektor tersebut. Pendekatan ini banyak digunakan dalam rekomendasi berbasis konten untuk menilai kesamaan antara dua item (seperti film atau buku) berdasarkan fitur-fitur atau kata kunci yang mereka miliki.
+
+    - **Kelebihan**
+
+      - Independensi Magnitudo: Mengukur kesamaan berdasarkan sudut antara vektor, bukan panjangnya, sehingga efektif untuk data berdimensi tinggi.
+      - Efisiensi Komputasi: Perhitungan cepat dan sederhana, ideal untuk dataset besar.
+
+    - **Kekurangan**
+
+      - Mengabaikan Magnitudo: Tidak mempertimbangkan ukuran vektor, yang mungkin relevan dalam beberapa konteks.
+      - Sensitif terhadap Noise: Hasil dapat terpengaruh oleh fitur yang tidak relevan atau bising.
 
 
-- Sistem rekomendasi berbasis konten (Collaborative Filtering) model based Deep learning atau Neural Network .
+### 2. RecomenderNet
 
-  - **Cara Kerja:** 
-  Menggunakan model neural network, untuk menemukan pola dalam interaksi pengguna terhadap item tertentu. Model ini umumnya melibatkan embedding untuk merepresentasikan pengguna dan item dalam ruang vektor, yang kemudian dilatih untuk memprediksi preferensi pengguna terhadap item.
+- **Cara Membuat Model**:
+
+  1.   ```import tensorflow as tflw```
+
+       - Mengimpor pustaka TensorFlow dan memberi nama alias tflw.
+
+  2.   ```from tensorflow import keras```
+
+       - Mengimpor sub-pustaka Keras dari TensorFlow.
+
+  3.   ```from tensorflow.keras import layers```
+
+       - Mengimpor modul layers dari Keras yang ada di dalam TensorFlow.
+
+    ![alt text](image-3.png)
+
+  membuat class RecommenderNet dengan keras Model class. Kode class RecommenderNet ini terinspirasi dari tutorial dalam situs Keras dengan beberapa adaptasi sesuai kasus yang ingin diselesaikan.
+
+- **Cara Kerja Pendekatan Collaborative Filtering:**
+
+  Collaborative filtering menganalisis interaksi pengguna dengan item untuk memberikan rekomendasi. Algoritma ini bekerja dengan mencari pola dalam penilaian atau perilaku pengguna dan menyarankan item yang mungkin disukai berdasarkan preferensi pengguna lain yang memiliki kesamaan. Ada dua jenis utama dalam collaborative filtering: user-based yang mencocokkan pengguna serupa, dan item-based yang mencocokkan item yang sering dinilai tinggi oleh pengguna yang sama. Semakin banyak interaksi yang diperoleh, semakin baik akurasi sistem rekomendasi
 
   - **Kelebihan:**
 
-    - Dapat Menangkap Preferensi Lebih Kompleks: Dengan model deep learning, sistem ini dapat mempelajari pola preferensi yang kompleks dan non-linear.
-    - Mengatasi Masalah Cold Start (pada Konten): Collaborative filtering menggunakan data pengguna sehingga dapat merekomendasikan item baru yang belum memiliki cukup metadata.
-    - Lebih Kaya dalam Diversifikasi: Dengan memanfaatkan data dari banyak pengguna, sistem bisa memberikan rekomendasi lebih bervariasi, termasuk item yang berbeda dari preferensi pengguna tetapi relevan dengan kelompok pengguna yang serupa.
+    - Rekomendasi yang Personalisasi: Memberikan rekomendasi berdasarkan interaksi nyata pengguna, sehingga lebih sesuai dengan preferensi individu.
+    - Independen dari Konten: Tidak memerlukan pengetahuan mendalam tentang konten item, sehingga dapat digunakan untuk berbagai jenis item (film, buku, produk, dll).
+    - Mendapatkan Rekomendasi Baru: Dapat merekomendasikan item yang tidak dikenal sebelumnya oleh pengguna, membuka kesempatan untuk penemuan baru.
 
   - **Kekurangan:**
 
-    - Memerlukan Data Pengguna yang Banyak: Collaborative filtering membutuhkan interaksi pengguna dalam jumlah besar agar rekomendasi efektif.
-    - Cold Start untuk Pengguna Baru: Pengguna baru tanpa riwayat interaksi mungkin tidak mendapatkan rekomendasi yang baik sampai ada cukup data interaksi.
-    - Komputasi yang Lebih Intensif: Model deep learning, seperti RecommenderNet, membutuhkan daya komputasi yang tinggi dan sumber daya yang lebih besar untuk pelatihan dan inferensi.
+    - Cold Start Problem: Sulit memberikan rekomendasi yang akurat untuk pengguna baru atau item baru yang belum memiliki cukup interaksi.
+    - Data Sparsity: Jika data interaksi pengguna sangat sedikit, sulit untuk menemukan pola yang cukup untuk menghasilkan rekomendasi yang baik.
+    - Bias terhadap Popularitas: Cenderung merekomendasikan item yang sudah populer, sehingga item yang kurang dikenal bisa terabaikan meskipun mungkin relevan untuk pengguna tertentu.
+
+- **Cara Kerja Model RecommenderNet:**
+
+  RecommenderNet adalah model yang dirancang untuk memberikan rekomendasi kepada pengguna berdasarkan interaksi mereka dengan item sebelumnya. Model ini menggunakan teknik pembelajaran mendalam untuk mempelajari pola dan preferensi pengguna dari data historis. Proses ini melibatkan pengkodean informasi pengguna dan item ke dalam representasi vektor, yang kemudian digunakan untuk memprediksi preferensi pengguna terhadap item yang belum mereka lihat.
+
+  - **Kelebihan**
+
+    - Personalisasi Tinggi: Mampu menghasilkan rekomendasi yang sangat sesuai dengan preferensi individu pengguna berdasarkan analisis data historis.
+    - Kemampuan Menangkap Hubungan Kompleks: Dapat memahami dan memodelkan interaksi non-linear antara pengguna dan item, meningkatkan akurasi rekomendasi.
+
+  - **Kekurangan**
+    - Memerlukan Banyak Data: Kinerja optimal tergantung pada ketersediaan data yang cukup banyak dan beragam dari pengguna dan item.
+    - Kompleksitas Model: Lebih rumit dalam hal arsitektur dan pelatihan dibandingkan metode rekomendasi tradisional, memerlukan lebih banyak sumber daya komputasi.
+
+### Hasil Top-N Rekomendasi Model Cosine Similiarity
+
+| anime_id | Name                  | Genres                        |
+|----------|-----------------------|-------------------------------|
+| 12335    | Hajimete no Gal       | Comedy, Romance, Ecchi        |
+
+
+| No | Name                                                   | Genres                   |
+|----|--------------------------------------------------------|--------------------------|
+| 0  | High School DxD New: Oppai, Tsutsumimasu!            | Comedy, Romance, Ecchi   |
+| 1  | Love Hina Final Selection                              | Comedy, Romance, Ecchi   |
+| 2  | Mujaki no Rakuen                                      | Comedy, Romance, Ecchi   |
+| 3  | 1+2=Paradise                                          | Comedy, Romance, Ecchi   |
+| 4  | Kimi ga Aruji de Shitsuji ga Ore de                  | Comedy, Romance, Ecchi   |
+| 5  | Gift: Eternal Rainbow - Ki no Saka Ryokan Kiki...    | Comedy, Romance, Ecchi   |
+| 6  | Maji de Watashi ni Koi Shinasai!                     | Comedy, Romance, Ecchi   |
+| 7  | Dakara Boku wa, H ga Dekinai. Mie Sugi! Mizugi...    | Comedy, Romance, Ecchi   |
+| 8  | Sprite: Between Two Worlds                             | Comedy, Romance, Ecchi   |
+| 9  | Megami no Café Terrace                                 | Comedy, Romance, Ecchi   |
+
+Berdasarkan hasil tabel di atas model `Cosine Similiarity` berhasil merekomendasikan Top-N anime dengan genre yang sama dengan anime Hajimete no Gal.
+
+### Hasil Top-N Rekomendasi RecommenderNet 
+
+<br>
+
+=============================================
+
+**Menampilkan Rekomendasi untuk Pengguna: 707343**
+
+=============================================
+
+**Anime dengan Rating Tertinggi dari Pengguna**
+
+=============================================
+
+| Judul Anime | Genre |
+|-------------|-------|
+| **New Game!** | Comedy |
+
+=============================================
+
+**Rekomendasi 10 Anime Teratas**
+
+=============================================
+
+| No. | Judul Anime | Genre |
+|-----|-------------|-------|
+| 1   | **s.CRY.ed** | Action, Adventure, Drama, Sci-Fi |
+| 2   | **Slam Dunk** | Sports |
+| 3   | **Tactics** | Mystery, Supernatural |
+| 4   | **One Piece Film: Strong World** | Action, Adventure, Fantasy |
+| 5   | **Major S5** | Sports |
+| 6   | **Naruto: Shippuuden Movie 3 - Hi no Ishi wo Tsugu Mono** | Action, Adventure, Fantasy |
+| 7   | **Tegamibachi Reverse** | Adventure, Fantasy |
+| 8   | **Natsume Yuujinchou San** | Drama, Slice of Life, Supernatural |
+| 9   | **Haikyuu!! Karasuno Koukou vs. Shiratorizawa Gakuen Koukou** | Sports |
+| 10  | **Bocchi the Rock!** | Comedy |
+
+Berdasarkan hasil tabel di atas model `RecommenderNet` berhasil merekomendasikan anime dengan rating tertinggi dari pengguna dan merekomendasikan Top-N anime teratas pada Pengguna: 707343.
 
 ## Evaluation
 
-Pengukuran performa dari model sistem rekomendasi bergantung pada jenis sistem rekomendasi yang digunakan. Untuk model dengan Content-based Filtering, performa akan dihitung berdasarkan seberapa cocok produk yang direokmendasikan dengan kategorinya. Sedangkan Collaborative filtering akan menggunakan metrik pengukuran model based, contohnya RMSE.
+Pada project ini ada 2 matrix yang digunakan untuk mengevaluasi model yaitu *Precision* dan *RMSE (Root Mean Squared Error)* dengan penjelasan seeperti berikut: 
 
-### Pengujian Model Content Based Filtering
+### Evaluasi Model *Cosine Similiarity*
 
 Model ini hanya menggunakan metrik Precision untuk mengetahui seberapa baik perforam model tersebut. Presisi adalah metrik yang biasa digunakan untuk mengevaluasi kinerja model pengelompokan. Metrik ini menghitung rasio antara nilai ground truth (nilai sebenarnya) dengan nilai prediksi yang positf. Perhitungan rasio ini dijabarkan melalui rumus di bawah ini:
 
@@ -274,30 +646,9 @@ Dimana:
 - TP (*True Positive*), jumlah kejadian positif yang diprediksi dengan benar.
 - FP (*False Positive*), jumlah kejadian positif yang diprediksi dengan salah.
 
-**Testing Hasil Evaluasi Model Content Based Filtering**
+Berdasarkan hasil yang terdapat pada tahap Model and Result dapat dilihat bahwasanya besar presisi jika dihitung adalah 10/10 untuk rekomendasi Top-10. Ini menunjukan sistem mampu memberikan rekomendasi sesuai dengan Genres Animenya.
 
-|No        | anime_id | Name     | Genres |
-|----------|----------|----------|--------|
-| 15577    | 39568    | Tarareba | Drama  |
-
-percobaan mencari rekomendasi anime yang mirip dengan anime Tarareba dengan Genre Drama.
-
-| No | Name                                                | Genres |
-|----|-----------------------------------------------------|--------|
-| 0  | Cosmic Break                                        | Drama  |
-| 1  | Shokugeki no Souma: San no Sara - Kyokuseiryou...   | Drama  |
-| 2  | Ubasuteyama                                         | Drama  |
-| 3  | IDOLiSH7 Vibrato                                    | Drama  |
-| 4  | Akage no Anne                                       | Drama  |
-| 5  | Yuki no Yoru no Yume                                | Drama  |
-| 6  | Kinyoubi no Yakusoku                                | Drama  |
-| 7  | Hibike! Euphonium                                   | Drama  |
-| 8  | Piano no Mori (TV)                                  | Drama  |
-| 9  | Drive Agent Personal: Shiawase wo Mamoru Mono       | Drama  |
-
-Berdasarkan hasil yang dikeluarkan tabel di atas dapat dilihat bahwasanya besar presisi jika dihitung adalah 10/10 untuk rekomendasi Top-10. Ini menunjukan sistem mampu memberikan rekomendasi sesuai dengan Genres Animenya.
-
-### Pengujian Model *Collaborative Filtering*
+### Evaluasi Model *RecommenderNet*
 
 Evaluasi metrik yang dapat digunakan untuk mengukur kinerja model ini adalah metrik RMSE (*Root Mean Squared Error*). RMSE adalah metode pengukuran dengan mengukur perbedaan nilai dari prediksi sebuah model sebagai estimasi atas nilai yang diobservasi. RMSE dapat dijabarkan melalui pendekatan rumus berikut ini
 
@@ -315,30 +666,11 @@ Dimana:
 
 Dengan epoch sebanyak 100, model ini memperoleh nilai error akhir sebesar sekitar 0.06 untuk training dan error pada data validasi sebesar 0.25. Nilai tersebut cukup bagus untuk sistem rekomendasi.
 
-**Testing Hasil Evaluasi Model Collaborative Filtering model based Deep learning**
-
-| No  | Title                                                   | Genres                          |
-|-----|---------------------------------------------------------|---------------------------------|
-|     | **Anime dengan rating tertinggi dari pengguna**         |                                 |
-| 1   | Final Approach                                          | Comedy, Drama, Romance          |
-|-----|---------------------------------------------------------|---------------------------------|
-|     | **Rekomendasi 10 anime teratas**                        |                                 |
-| 1   | One Piece                                               | Action, Adventure, Fantasy      |
-| 2   | s.CRY.ed                                                | Action, Adventure, Drama, Sci-Fi|
-| 3   | Slam Dunk                                               | Sports                          |
-| 4   | Tactics                                                 | Mystery, Supernatural           |
-| 5   | One Piece Film: Strong World                            | Action, Adventure, Fantasy      |
-| 6   | Major S5                                                | Sports                          |
-| 7   | Naruto: Shippuuden Movie 3 - Hi no Ishi wo Tsugu Mono   | Action, Adventure, Fantasy      |
-| 8   | Tegamibachi Reverse                                     | Adventure, Fantasy              |
-| 9   | Haikyuu!! Karasuno Koukou vs. Shiratorizawa Gakuen Koukou | Sports                       |
-| 10  | Bocchi the Rock!                                        | Comedy                          |
-
-Berdasarkan hasil yang dikeluarkan tabel di atas rekomendasi untuk user dengan id 75809. Dari output tersebut, kita dapat membandingkan antara Anime dengan rating tertinggi dari pengguna dan Rekomendasi 10 anime teratas untuk user 75809.
+Berdasarkan hasil yang didapat pada tahap Model and Result untuk user dengan id 707343 model berhasil merekomendasikan Anime dengan rating tertinggi dari pengguna dan Rekomendasi Top-10 anime teratas untuk user 707343.
 
 ## Kesimpulan
 
-Dari hasil evaluasi, solusi sistem rekomendasi berbasis Content-Based Filtering dengan Cosine Similarity dan Collaborative Filtering menggunakan model deep learning RecommenderNet menunjukkan bahwa kedua pendekatan ini berhasil mencapai tujuan proyek. Content-Based Filtering memberikan rekomendasi anime yang relevan berdasarkan kesamaan genre dengan presisi tinggi, mencapai rekomendasi Top-10 yang sesuai kategori. Sementara itu, model Collaborative Filtering berbasis RecommenderNet menghasilkan rekomendasi anime berdasarkan pola rating pengguna dengan error yang rendah (RMSE sekitar 0.06 untuk data training dan 0.25 untuk data validasi), menunjukkan kemampuannya dalam memprediksi preferensi pengguna dengan akurat. Secara keseluruhan, kedua pendekatan ini berhasil memberikan rekomendasi yang relevan dan sesuai dengan tujuan utama, yaitu menyediakan rekomendasi anime yang sesuai dengan preferensi genre dan pola rating pengguna.
+Dari hasil evaluasi, solusi sistem rekomendasi dengan pendekatan Content-Based Filtering dengan model Cosine Similarity dan Collaborative Filtering menggunakan model RecommenderNet menunjukkan bahwa kedua pendekatan ini berhasil mencapai tujuan proyek. Content-Based Filtering dengan model Cosine Similiarity memberikan rekomendasi anime yang relevan berdasarkan kesamaan genre dengan presisi tinggi, mencapai rekomendasi Top-10 yang sesuai kategori. Sementara itu, pendekatan Collaborative Filtering dengan model RecommenderNet menghasilkan rekomendasi anime berdasarkan pola rating pengguna dengan error yang rendah (RMSE sekitar 0.06 untuk data training dan 0.25 untuk data validasi), menunjukkan kemampuannya dalam memprediksi preferensi pengguna dengan akurat. Secara keseluruhan, kedua pendekatan ini berhasil memberikan rekomendasi yang relevan dan sesuai dengan tujuan utama, yaitu menyediakan rekomendasi anime yang sesuai dengan preferensi genre dan pola rating pengguna.
 
 ## Referensi
 
