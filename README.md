@@ -432,7 +432,7 @@ Teknik Data preparation yang dilakukan terdiri dari:
 
 ### TF-IDF Vectorizer Data Anime
 
-![alt text](image.png)
+![alt text](https://github.com/Agim-dudu/Sistem-Rekomendasi---Anime/blob/main/Resource/image.png?raw=true)
 
  - Mengubah data kedalam representasi numerik dengan TF-IDF Vectorizer sebelum tahap Modeling **Cosine Similiarity**
 
@@ -442,7 +442,7 @@ Teknik Data preparation yang dilakukan terdiri dari:
 
 ### Encoding Data User Rating
 
-![alt text](image-1.png)
+![alt text](https://github.com/Agim-dudu/Sistem-Rekomendasi---Anime/blob/main/Resource/image-1.png?raw=true)
 
 - Encoding data untuk sebelum tahap pemodelan **Collaborative Filtering**
 
@@ -486,7 +486,7 @@ Pada tahapan model yang digunakan terdiri dari:
 
           - tfidf_matrix: Matriks yang berisi nilai TF-IDF untuk masing-masing anime.
 
-    ![alt text](image-2.png)
+    ![alt text](https://github.com/Agim-dudu/Sistem-Rekomendasi---Anime/blob/main/Resource/image-2.png?raw=true)
 
     pada kode di atas, dengan menggunakan argpartition, kita mengambil sejumlah nilai k tertinggi dari similarity data (dalam kasus ini: dataframe cosine_sim_df). Kemudian, kita mengambil data dari bobot (tingkat kesamaan) tertinggi ke terendah. Data ini dimasukkan ke dalam variabel closest. Berikutnya, kita perlu menghapus nama_anime yang yang dicari agar tidak muncul dalam daftar rekomendasi. Dalam kasus ini, nanti kita akan mencari anime yang mirip dengan Tarareba, sehingga kita perlu drop nama_anime Tarareba agar tidak muncul dalam daftar rekomendasi yang diberikan nanti.
 
@@ -537,7 +537,7 @@ Pada tahapan model yang digunakan terdiri dari:
 
        - Mengimpor modul layers dari Keras yang ada di dalam TensorFlow.
 
-    ![alt text](image-3.png)
+    ![alt text](https://github.com/Agim-dudu/Sistem-Rekomendasi---Anime/blob/main/Resource/image-3.png?raw=true)
 
   membuat class RecommenderNet dengan keras Model class. Kode class RecommenderNet ini terinspirasi dari tutorial dalam situs Keras dengan beberapa adaptasi sesuai kasus yang ingin diselesaikan.
 
